@@ -1,0 +1,157 @@
+﻿/* Reset margin for the body */
+body {
+    margin: 0;
+}
+
+/* Main login wrapper */
+.login-wrapper {
+    height: 100vh;
+    background-color: #323d4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    /* Add these properties to ensure full coverage */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+/* Login container */
+.login-page {
+    width: 100%;
+    max-width: 650px;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 0 10px #00000059;
+    border-radius: 15px;
+    /* Add z-index to ensure it's above any potential layout elements */
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .login-page {
+        padding: 20px;
+    }
+}
+
+/* Logo section */
+.logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+    .logo h2 {
+        font-size: 35px;
+        color: #2f3439;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+@media (max-width: 767px) {
+    .logo h2 {
+        font-size: 25px;
+    }
+}
+
+/* Form styles */
+.main-form-wrap {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-wrap {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .form-wrap {
+        margin-bottom: 15px;
+    }
+}
+
+/* Label styles */
+label {
+    color: #2f3439;
+    font-weight: 400;
+    margin-bottom: 5px;
+    display: block;
+    font-family: system-ui;
+}
+
+@media (max-width: 767px) {
+    label {
+        font-size: 14px;
+    }
+}
+
+/* Input styles */
+input, .form-control {
+    color: #2f3439;
+    width: 96%;
+    background-color: #e8f0fe;
+    border: 1px solid #e8f0fe;
+    border-radius: 8px;
+    padding: 17px 12px;
+    outline: none;
+    font-family: system-ui;
+}
+
+@media (max-width: 767px) {
+    input, .form-control {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+input::placeholder {
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+/* Submit button styles */
+.submit-btn button {
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    padding: 17px 12px;
+    border-radius: 8px;
+    background-color: #323d4e;
+    outline: none;
+    border: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .submit-btn button {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+.submit-btn button:hover {
+    background-color: #4b5564;
+}
+
+/* Error message styles */
+.error-message {
+    color: #dc2626;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: system-ui;
+}
+
+/* Validation message styles */
+.validation-message {
+    color: #dc2626;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: system-ui;
+}

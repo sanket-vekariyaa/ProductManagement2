@@ -1,0 +1,57 @@
+﻿@page "/login"
+@layout EmptyLayout
+@inject NavigationManager NavigationManager
+@using ProductManagement.Layout
+@using ProductManagement.Model
+<link rel="stylesheet" href="css/login.css">
+
+<div class="login-wrapper">
+    <div class="login-page">
+        <div class="logo">
+            <h2>SIGN IN</h2>
+        </div>
+        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin" FormName="Login">
+            <div class="main-form-wrap">
+                <div class="form-wrap">
+                    <label for="username">Username:</label>
+                    <InputText id="username" class="form-control" @bind-Value="loginModel.Username" placeholder="Enter your username" />
+                    <ValidationMessage For="@(() => loginModel.Username)" />
+                </div>
+                <div class="form-wrap">
+                    <label for="password">Password:</label>
+                    <InputText id="password" type="password" class="form-control" @bind-Value="loginModel.Password" placeholder="Enter your password" />
+                    <ValidationMessage For="@(() => loginModel.Password)" />
+                </div>
+                <div class="submit-btn">
+                    <button type="submit">Login</button>
+                </div>
+            </div>
+        </EditForm>
+        @if (loginFailed)
+        {
+            <div class="error-message">
+                <p>Login failed. Please check your credentials and try again.</p>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private AuthModel loginModel = new AuthModel();
+    private bool loginFailed = false;
+
+    private void HandleLogin()
+    {
+        // For demonstration, hardcoded username and password check
+        if (loginModel.Username == "admin" && loginModel.Password == "password123")
+        {
+            // Redirect to home page or a dashboard
+            NavigationManager.NavigateTo("/dashboard");
+        }
+        else
+        {
+            // Invalid login
+            loginFailed = true;
+        }
+    }
+}

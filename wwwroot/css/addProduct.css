@@ -1,0 +1,94 @@
+﻿/* Ensure the body has no margin */
+body {
+    margin: 0;
+}
+
+/* Center the form on the page */
+.add-product-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+/* Style the form container */
+.add-product {
+    box-shadow: 0 0 5px rgb(185 185 185 / 55%);
+    width: 600px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Style for headings */
+h3 {
+    font-family: ui-sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: #323d4e;
+}
+
+/* Form group styling */
+.form-group {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Label styling */
+label {
+    font-family: system-ui;
+    font-size: 15px;
+    color: #323d4e;
+    font-weight: 500;
+}
+
+/* Input text styling */
+input, .form-control, select{
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-family: system-ui;
+    font-size: 13px;
+}
+
+
+    input::placeholder, .form-control::placeholder {
+        font-family: system-ui;
+        font-size: 13px;
+    }
+
+/* Button styling */
+button, .btn btn-primary {
+    margin: 10px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #2973b4;
+}
+
+    button:hover, .btn btn-primary:hover {
+        background-color: #1e5a88;
+    }
+
+button.save {
+    background-color: #2973b4;
+}
+
+button.close {
+    background-color: #d83949;
+}
+
+button.save:hover {
+    background-color: #1e5a88;
+}
+
+button.close:hover {
+    background-color: #c72e3f;
+}
